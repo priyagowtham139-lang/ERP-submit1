@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Admin Dashboard | Corevo ERP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dash-overlay"></div>
+<header class="dash-mobile-header">
+  <a href="index.html" class="brand">
+    <img src="assets/logo_white.webp" alt="Corevo" class="brand-mark" style="height:24px;">
+  </a>
+  <button class="dash-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+<div class="dash-shell">
+  <aside class="dash-sidebar">
+    <div class="dash-sidebar-top">
+      <a href="index.html" class="brand">
+        <img src="assets/logo_white.webp" alt="Corevo" class="brand-mark">
+      </a>
+      <button class="dash-sidebar-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <nav class="dash-nav">
+      <button data-panel="overview" class="active"><i class="fa-solid fa-gauge-high"></i><span>&nbsp; Overview</span></button>
+      <button data-panel="users"><i class="fa-solid fa-users-gear"></i><span>&nbsp; Users</span></button>
+      <button data-panel="modules"><i class="fa-solid fa-cubes"></i><span>&nbsp; Apps &amp; Modules</span></button>
+      <button data-panel="billing"><i class="fa-solid fa-credit-card"></i><span>&nbsp; Billing</span></button>
+      <button data-panel="reports"><i class="fa-solid fa-chart-line"></i><span>&nbsp; Reports</span></button>
+      <button data-panel="settings"><i class="fa-solid fa-gear"></i><span>&nbsp; Settings</span></button>
+      <a href="login.html" class="dash-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>&nbsp; Log Out</span></a>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div class="dash-topbar-left">
+        <div><h1 id="panel-title">Workspace Overview</h1><p id="panel-subtitle">Account-wide snapshot across all connected apps.</p></div>
+      </div>
+      <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-file-export"></i> Export Report</a>
+    </div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="dash-panel active" id="panel-overview">
+      <div class="stat-grid">
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-users"></i></div><span class="delta">+3 this month</span></div><div class="val">42</div><div class="lbl">Active Users</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-cubes"></i></div><span class="delta">All healthy</span></div><div class="val">7</div><div class="lbl">Apps Enabled</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-indian-rupee-sign"></i></div><span class="delta">+9.4%</span></div><div class="val">$3,564</div><div class="lbl">Monthly Spend</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="delta down">Review needed</span></div><div class="val">3</div><div class="lbl">Pending Approvals</div></div>
+      </div>
+      <div class="dash-grid">
+        <div class="panel reveal in-view">
+          <h3>Seat usage — last 6 months</h3>
+          <div class="bars">
+            <div class="bar" style="height:52%;"><span>Feb</span></div>
+            <div class="bar" style="height:58%;"><span>Mar</span></div>
+            <div class="bar" style="height:63%;"><span>Apr</span></div>
+            <div class="bar" style="height:70%;"><span>May</span></div>
+            <div class="bar" style="height:75%;"><span>Jun</span></div>
+            <div class="bar" style="height:88%;"><span>Jul</span></div>
+          </div>
+        </div>
+        <div class="panel reveal in-view">
+          <h3>Recent Admin Activity</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot" style="background:var(--gold);"></span><div><p>Karthik Iyer was granted Inventory access.</p><span>3 hours ago</span></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Manufacturing app enabled for the workspace.</p><span>1 day ago</span></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Billing plan upgraded to Growth (Annual).</p><span>4 days ago</span></div></div>
+            <div class="activity-item"><span class="dot" style="background:var(--gold);"></span><div><p>2 users pending role approval.</p><span>5 days ago</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-grid" style="margin-top:1.5rem;">
+        <div class="panel reveal in-view">
+          <h3>Workspace Health</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot"></span><div><p>All 7 apps running normally.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Server uptime: <b>99.98%</b> this month.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Last security scan: <b>No issues found</b>.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Storage used: <b>12.4 GB</b> of 50 GB.</p></div></div>
+          </div>
+        </div>
+        <div class="panel reveal in-view">
+          <h3>Quick Actions</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:.8rem; margin-top:.5rem;">
+            <a href="404.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-user-plus"></i> Add User</a>
+            <a href="404.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-cube"></i> Enable App</a>
+            <a href="404.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-file-export"></i> Export Report</a>
+            <a href="404.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-shield-halved"></i> Audit Log</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== USERS ===== -->
+    <section class="dash-panel" id="panel-users">
+      <div class="panel" style="overflow-x:auto; margin-bottom:1.5rem;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+          <h3 style="margin:0;">Workspace Users</h3>
+          <a href="404.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-user-plus"></i> Add User</a>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Name</th><th>Role</th><th>App Access</th><th>Last Active</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Meera Iyer</td><td>Workspace Admin</td><td>All Apps</td><td>Just now</td><td><span class="status-pill ok">Active</span></td></tr>
+            <tr><td>Ravi Kumar</td><td>Operations User</td><td>CRM, Sales, Inventory, Accounting</td><td>5 min ago</td><td><span class="status-pill ok">Active</span></td></tr>
+            <tr><td>Priya Nair</td><td>Sales Rep</td><td>CRM, Sales</td><td>2 hours ago</td><td><span class="status-pill ok">Active</span></td></tr>
+            <tr><td>Karthik Iyer</td><td>Warehouse Lead</td><td>Inventory</td><td>1 day ago</td><td><span class="status-pill pending">Invited</span></td></tr>
+            <tr><td>Anil Verma</td><td>Finance Lead</td><td>Accounting</td><td>3 hours ago</td><td><span class="status-pill review">Access Requested</span></td></tr>
+            <tr><td>Anita Desai</td><td>Accountant</td><td>Accounting</td><td>1 hour ago</td><td><span class="status-pill ok">Active</span></td></tr>
+            <tr><td>Vikram Patel</td><td>HR Manager</td><td>HR &amp; Payroll</td><td>5 hours ago</td><td><span class="status-pill ok">Active</span></td></tr>
+            <tr><td>Neha Gupta</td><td>Sales Rep</td><td>CRM, Sales</td><td>2 days ago</td><td><span class="status-pill ok">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dash-grid">
+        <div class="panel">
+          <h3>Role Distribution</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot"></span><div><p><b>1</b> Workspace Admin</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p><b>3</b> Sales Reps</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p><b>2</b> Operations / Warehouse</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p><b>2</b> Finance / HR</p></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Pending Approvals</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot" style="background:#EF4444;"></span><div><p>Anil Verma — Accounting access request</p><span>Awaiting admin review</span></div></div>
+            <div class="activity-item"><span class="dot" style="background:var(--gold);"></span><div><p>Karthik Iyer — Invite pending acceptance</p><span>Sent 3 days ago</span></div></div>
+            <div class="activity-item"><span class="dot" style="background:var(--gold);"></span><div><p>Rahul Sen — Invite pending acceptance</p><span>Sent 1 day ago</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPS & MODULES ===== -->
+    <section class="dash-panel" id="panel-modules">
+      <div class="grid-3">
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-address-book"></i></div><h3 class="card-title">CRM</h3><p>Enabled for all 42 users. 6 pipelines active.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-file-invoice-dollar"></i></div><h3 class="card-title">Sales</h3><p>Enabled for 28 users. $24K pipeline this month.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-boxes-stacked"></i></div><h3 class="card-title">Inventory</h3><p>Enabled for 15 users. 3 items below reorder.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-calculator"></i></div><h3 class="card-title">Accounting</h3><p>Enabled for 6 users. $8.2K outstanding.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-industry"></i></div><h3 class="card-title">Manufacturing</h3><p>Enabled for 9 users. 12 work orders active.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-users"></i></div><h3 class="card-title">HR &amp; Payroll</h3><p>Enabled for 5 users. Next payroll: 1 Aug.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card"><div class="icon-wrap"><i class="fa-solid fa-globe"></i></div><h3 class="card-title">Website Builder</h3><p>Enabled for 2 users. 1 site published.</p><div style="margin-top:.8rem; display:flex; gap:.5rem;"><a href="404.html" class="btn btn-outline btn-sm">Manage</a><a href="404.html" class="btn btn-ghost btn-sm">Logs</a></div></div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; text-align:center; border-style:dashed;">
+          <div><i class="fa-solid fa-plus" style="font-size:1.4rem; color:var(--slate); margin-bottom:.6rem; display:block;"></i><a href="404.html" style="font-weight:600; font-size:.9rem;">Enable another app</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BILLING ===== -->
+    <section class="dash-panel" id="panel-billing">
+      <div class="panel" style="margin-bottom:1.5rem;">
+        <h3>Current Plan</h3>
+        <p style="color:var(--slate); font-size:.9rem; margin-bottom:1rem;">Growth Plan — billed annually, 42 seats active.</p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;"><a href="404.html" class="btn btn-outline btn-sm">Change Plan</a><a href="404.html" class="btn btn-primary btn-sm">Add Apps</a></div>
+      </div>
+      <div class="panel" style="overflow-x:auto; margin-bottom:1.5rem;">
+        <h3>Invoice History</h3>
+        <table class="data-table">
+          <thead><tr><th>Invoice</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>IN-9001</td><td>1 Jul 2026</td><td>$3,564.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+            <tr><td>IN-8988</td><td>1 Jun 2026</td><td>$3,564.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+            <tr><td>IN-8971</td><td>1 May 2026</td><td>$3,214.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+            <tr><td>IN-8955</td><td>1 Apr 2026</td><td>$3,214.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+            <tr><td>IN-8932</td><td>1 Mar 2026</td><td>$3,214.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+            <tr><td>IN-8910</td><td>1 Feb 2026</td><td>$2,890.00</td><td><span class="status-pill ok">Paid</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dash-grid">
+        <div class="panel">
+          <h3>Seat Usage</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot"></span><div><p><b>42 / 50</b> seats used (84%)</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p><b>8</b> seats remaining</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Cost per seat: <b>$84.86/mo</b></p></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Payment Method</h3>
+          <div style="display:flex; align-items:center; gap:1rem; margin-top:.5rem;">
+            <div style="width:48px; height:32px; background:var(--paper-deep); border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.75rem; color:var(--teal);">VISA</div>
+            <div><b style="font-size:.9rem;">Visa ending in 8888</b><br><span style="color:var(--slate); font-size:.8rem;">Expires 12/2028</span></div>
+          </div>
+          <a href="404.html" class="btn btn-outline btn-sm" style="margin-top:.8rem;">Update Payment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REPORTS ===== -->
+    <section class="dash-panel" id="panel-reports">
+      <div class="stat-grid" style="margin-bottom:1.5rem;">
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-indian-rupee-sign"></i></div><span class="delta">+14%</span></div><div class="val">$182K</div><div class="lbl">Company Revenue (Q2)</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-users"></i></div><span class="delta">+8%</span></div><div class="val">92%</div><div class="lbl">User Adoption Rate</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-handshake"></i></div><span class="delta">+22%</span></div><div class="val">86</div><div class="lbl">Deals Closed (Q2)</div></div>
+        <div class="stat-card reveal in-view"><div class="top"><div class="icon-wrap"><i class="fa-solid fa-clock"></i></div><span class="delta">-18%</span></div><div class="val">1.2 days</div><div class="lbl">Avg. Onboarding Time</div></div>
+      </div>
+      <div class="dash-grid">
+        <div class="panel reveal in-view">
+          <h3>Company-wide revenue ($k)</h3>
+          <div class="bars">
+            <div class="bar" style="height:48%;"><span>Feb</span></div>
+            <div class="bar" style="height:55%;"><span>Mar</span></div>
+            <div class="bar" style="height:60%;"><span>Apr</span></div>
+            <div class="bar" style="height:68%;"><span>May</span></div>
+            <div class="bar" style="height:74%;"><span>Jun</span></div>
+            <div class="bar" style="height:90%;"><span>Jul</span></div>
+          </div>
+        </div>
+        <div class="panel reveal in-view">
+          <h3>Adoption Highlights</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot"></span><div><p>CRM daily active usage up 18% quarter over quarter.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Manufacturing work orders completed on time: 94%.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Average onboarding time for new users: 1.2 days.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Support ticket resolution time: 4.2 hours avg.</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Employee satisfaction score: 4.6 / 5.0.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel reveal in-view" style="margin-top:1.5rem; overflow-x:auto;">
+        <h3>App Usage Breakdown</h3>
+        <table class="data-table">
+          <thead><tr><th>App</th><th>Active Users</th><th>Avg. Hours/Week</th><th>Adoption</th><th>Trend</th></tr></thead>
+          <tbody>
+            <tr><td>CRM</td><td>42</td><td>34.2</td><td>100%</td><td><span class="status-pill ok">+18%</span></td></tr>
+            <tr><td>Sales</td><td>28</td><td>28.7</td><td>67%</td><td><span class="status-pill ok">+12%</span></td></tr>
+            <tr><td>Inventory</td><td>15</td><td>22.1</td><td>36%</td><td><span class="status-pill ok">+8%</span></td></tr>
+            <tr><td>Accounting</td><td>6</td><td>15.4</td><td>14%</td><td><span class="status-pill pending">+2%</span></td></tr>
+            <tr><td>Manufacturing</td><td>9</td><td>18.6</td><td>21%</td><td><span class="status-pill ok">+15%</span></td></tr>
+            <tr><td>HR &amp; Payroll</td><td>5</td><td>8.3</td><td>12%</td><td><span class="status-pill pending">+3%</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== SETTINGS ===== -->
+    <section class="dash-panel" id="panel-settings">
+      <div class="panel" style="margin-bottom:1.5rem;">
+        <h3>Workspace Settings</h3>
+        <div class="settings-row"><div><b>Single sign-on (SSO)</b><span>Require SSO for all workspace members</span></div><button class="toggle-switch" data-toggle></button></div>
+        <div class="settings-row"><div><b>Require 2FA for admins</b><span>Enforce two-factor authentication for admin roles</span></div><button class="toggle-switch on" data-toggle></button></div>
+        <div class="settings-row"><div><b>Audit log retention</b><span>Keep detailed activity logs for 12 months</span></div><button class="toggle-switch on" data-toggle></button></div>
+        <div class="settings-row"><div><b>Auto-approve access requests</b><span>Skip manual review for standard app access</span></div><button class="toggle-switch" data-toggle></button></div>
+        <div class="settings-row"><div><b>IP allowlisting</b><span>Restrict workspace access to approved IP addresses</span></div><button class="toggle-switch" data-toggle></button></div>
+        <div class="settings-row"><div><b>Data export notifications</b><span>Alert admins when data exports are initiated</span></div><button class="toggle-switch on" data-toggle></button></div>
+      </div>
+      <div class="dash-grid">
+        <div class="panel">
+          <h3>Admin Profile</h3>
+          <div style="display:flex; align-items:center; gap:1rem; margin-top:.5rem; margin-bottom:1rem;">
+            <div class="avatar" style="width:56px; height:56px; font-size:1.2rem; background:var(--gold); color:#2B1E05;">MI</div>
+            <div><b>Meera Iyer</b><br><span style="color:var(--slate); font-size:.85rem;">meera@acme.com · Workspace Admin</span></div>
+          </div>
+          <a href="404.html" class="btn btn-outline btn-sm">Edit Profile</a>
+        </div>
+        <div class="panel">
+          <h3>Security &amp; Audit</h3>
+          <div class="activity-list">
+            <div class="activity-item"><span class="dot"></span><div><p>Last password change: <b>10 Jun 2026</b></p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Last login: <b>Today, 8:45 AM</b> from Chrome on macOS</p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Active admin sessions: <b>1</b></p></div></div>
+            <div class="activity-item"><span class="dot"></span><div><p>Failed login attempts (30d): <b>0</b></p></div></div>
+          </div>
+          <a href="404.html" class="btn btn-outline btn-sm" style="margin-top:.8rem;">View Audit Log</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  document.querySelector('.dash-sidebar-close') && document.querySelector('.dash-sidebar-close').addEventListener('click', function(){
+    document.querySelector('.dash-sidebar').classList.remove('is-open');
+    document.querySelector('.dash-overlay').classList.remove('is-open');
+    document.querySelector('.dash-hamburger').classList.remove('is-open');
+  });
+
+  var PANEL_META = {
+    overview: ['Workspace Overview', 'Account-wide snapshot across all connected apps.'],
+    users: ['Users', 'Manage workspace members and their app access.'],
+    modules: ['Apps & Modules', 'Enable or review apps active for your workspace.'],
+    billing: ['Billing', 'View your plan, seats and invoice history.'],
+    reports: ['Reports', 'Company-wide performance and adoption metrics.'],
+    settings: ['Settings', 'Manage workspace-level security and access policies.']
+  };
+
+  document.querySelectorAll('.dash-nav button[data-panel]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.dash-nav button[data-panel]').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var target = btn.getAttribute('data-panel');
+      document.querySelectorAll('.dash-panel').forEach(function(p){ p.classList.remove('active'); });
+      var panelEl = document.getElementById('panel-' + target);
+      if(panelEl) panelEl.classList.add('active');
+      var meta = PANEL_META[target];
+      if(meta){
+        document.getElementById('panel-title').textContent = meta[0];
+        document.getElementById('panel-subtitle').textContent = meta[1];
+      }
+      if(window.innerWidth <= 860){
+        document.querySelector('.dash-sidebar').classList.remove('is-open');
+        document.querySelector('.dash-overlay').classList.remove('is-open');
+        document.querySelector('.dash-hamburger').classList.remove('is-open');
+      }
+      document.querySelectorAll('#'+ 'panel-' + target +' .bars').forEach(function(b){ b.classList.remove('in-view'); void b.offsetWidth; b.classList.add('in-view'); });
+    });
+  });
+
+  document.querySelectorAll('[data-toggle]').forEach(function(t){
+    t.addEventListener('click', function(){ t.classList.toggle('on'); });
+  });
+</script>
+</body>
+</html>

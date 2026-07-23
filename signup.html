@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sign Up | Corevo ERP</title>
+<meta name="description" content="Create your Corevo ERP account and start streamlining your business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-wrap">
+  <aside class="login-aside">
+    <div class="login-aside-content">
+      <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="login-hero-svg">
+        <circle cx="210" cy="150" r="130" fill="none" stroke="#16C79A" stroke-width="1.5" stroke-opacity=".35" class="spin-slow"/>
+        <circle cx="210" cy="150" r="90" fill="none" stroke="#D4A548" stroke-width="1" stroke-opacity=".2" class="spin-slow" style="animation-direction:reverse; animation-duration:22s;"/>
+        <g class="float">
+          <path d="M210 90 V140 M210 190 V240 M140 165 H185 M235 165 H280" class="mod-line draw in-view"/>
+          <rect x="185" y="140" width="50" height="50" rx="12" fill="#0B0F14"/>
+          <rect x="108" y="112" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="274" y="112" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="108" y="216" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="274" y="216" width="38" height="38" rx="10" class="mod-chip"/>
+        </g>
+        <circle cx="80" cy="60" r="3" fill="#16C79A" opacity=".5" class="particle p1"/>
+        <circle cx="350" cy="80" r="2" fill="#D4A548" opacity=".4" class="particle p2"/>
+        <circle cx="60" cy="240" r="2.5" fill="#16C79A" opacity=".3" class="particle p3"/>
+        <circle cx="370" cy="220" r="2" fill="#D4A548" opacity=".5" class="particle p4"/>
+        <circle cx="180" cy="30" r="1.5" fill="#16C79A" opacity=".4" class="particle p5"/>
+      </svg>
+
+      <h2 class="login-aside-title">Get started with Corevo in minutes.</h2>
+      <p class="login-aside-sub">Join thousands of businesses automating their operations today.</p>
+
+      <div class="login-features">
+        <div class="login-feature fade-up" style="animation-delay:.1s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div><strong>Quick Setup</strong><br><span>Go live in under 10 minutes.</span></div>
+        </div>
+        <div class="login-feature fade-up" style="animation-delay:.25s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-inbox"></i></div>
+          <div><strong>All-in-One Platform</strong><br><span>CRM, Sales, Inventory, Accounting &amp; HR.</span></div>
+        </div>
+        <div class="login-feature fade-up" style="animation-delay:.4s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+          <div><strong>Free Migration</strong><br><span>We move your data from any tool.</span></div>
+        </div>
+      </div>
+
+      <div class="login-stats fade-up" style="animation-delay:.55s;">
+        <div><span class="login-stat-num">14-Day</span><span class="login-stat-label">Free Trial</span></div>
+        <div><span class="login-stat-num">No CC</span><span class="login-stat-label">Required</span></div>
+        <div><span class="login-stat-num">24/7</span><span class="login-stat-label">Support</span></div>
+      </div>
+    </div>
+
+    <p style="color:rgba(243,245,248,.5); font-size:.8rem;">&copy; 2026 Corevo Software Pvt. Ltd.</p>
+  </aside>
+
+  <div class="login-form-side">
+    <div class="login-box">
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:.4rem; font-size:.85rem; color:var(--slate); margin-bottom:1.2rem; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Go back to home</a>
+      <span class="eyebrow">Create account</span>
+      <h1 style="font-family:var(--f-display); font-size:2rem; margin:.8rem 0 1.8rem;">Sign up</h1>
+
+      <form class="form-grid" id="signup-form" autocomplete="off">
+        <div class="form-field"><label for="s-first">First Name</label><input id="s-first" type="text" placeholder="John" required oninput="alphaOnly(this)"></div>
+        <div class="form-field"><label for="s-last">Last Name</label><input id="s-last" type="text" placeholder="Doe" required oninput="alphaOnly(this)"></div>
+
+        <div class="form-field full"><label for="s-email">Work Email</label><input id="s-email" type="email" placeholder="you@company.com" autocomplete="email" required onblur="gmailOnly(this)"></div>
+
+        <div class="form-field full"><label for="s-company">Company Name</label><input id="s-company" type="text" placeholder="Acme Inc." required oninput="alphaOnly(this)"></div>
+
+        <div class="form-field full password-field">
+          <label for="s-pass">Password</label>
+          <input id="s-pass" type="password" placeholder="Min 8 characters" autocomplete="new-password" required minlength="8">
+          <button type="button" class="password-toggle" aria-label="Show password" tabindex="-1">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="form-field full password-field">
+          <label for="s-pass2">Confirm Password</label>
+          <input id="s-pass2" type="password" placeholder="Repeat password" autocomplete="new-password" required minlength="8">
+          <button type="button" class="password-toggle" aria-label="Show password" tabindex="-1">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="form-field full">
+          <label style="display:flex; align-items:flex-start; gap:.5rem; font-weight:500; font-size:.85rem;">
+            <input type="checkbox" style="width:auto; margin-top:3px;" required>
+            <span>I agree to the <a href="404.html" style="color:var(--teal-deep);">Terms of Service</a> &amp; <a href="404.html" style="color:var(--teal-deep);">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <div class="form-field full">
+          <button type="submit" class="btn btn-primary btn-block">Create Account <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </form>
+
+      <p class="login-footnote">Already have an account? <a href="login.html" style="color:var(--teal-deep); font-weight:600;">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function gmailOnly(el){
+  var val = el.value.trim();
+  if(val && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(val)){
+    alert('Only Gmail addresses are allowed.');
+    el.value = '';
+    el.focus();
+  }
+}
+function alphaOnly(el){
+  var val = el.value;
+  if(/[^a-zA-Z\s]/.test(val)){
+    alert('Only alphabets are allowed.');
+    el.value = val.replace(/[^a-zA-Z\s]/g, '');
+  }
+}
+document.getElementById('signup-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  window.location.href = '404.html';
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

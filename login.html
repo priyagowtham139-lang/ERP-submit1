@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sign In | Corevo ERP</title>
+<meta name="description" content="Sign in to your Corevo ERP account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-wrap">
+  <aside class="login-aside">
+    <div class="login-aside-content">
+      <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="login-hero-svg">
+        <circle cx="210" cy="150" r="130" fill="none" stroke="#16C79A" stroke-width="1.5" stroke-opacity=".35" class="spin-slow"/>
+        <circle cx="210" cy="150" r="90" fill="none" stroke="#D4A548" stroke-width="1" stroke-opacity=".2" class="spin-slow" style="animation-direction:reverse; animation-duration:22s;"/>
+        <g class="float">
+          <path d="M210 90 V140 M210 190 V240 M140 165 H185 M235 165 H280" class="mod-line draw in-view"/>
+          <rect x="185" y="140" width="50" height="50" rx="12" fill="#0B0F14"/>
+          <rect x="108" y="112" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="274" y="112" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="108" y="216" width="38" height="38" rx="10" class="mod-chip"/>
+          <rect x="274" y="216" width="38" height="38" rx="10" class="mod-chip"/>
+        </g>
+        <circle cx="80" cy="60" r="3" fill="#16C79A" opacity=".5" class="particle p1"/>
+        <circle cx="350" cy="80" r="2" fill="#D4A548" opacity=".4" class="particle p2"/>
+        <circle cx="60" cy="240" r="2.5" fill="#16C79A" opacity=".3" class="particle p3"/>
+        <circle cx="370" cy="220" r="2" fill="#D4A548" opacity=".5" class="particle p4"/>
+        <circle cx="180" cy="30" r="1.5" fill="#16C79A" opacity=".4" class="particle p5"/>
+      </svg>
+
+      <h2 class="login-aside-title">Sign in to run your business from one dashboard.</h2>
+      <p class="login-aside-sub">Track deals, orders, invoices and your team — all in one place.</p>
+
+      <div class="login-features">
+        <div class="login-feature fade-up" style="animation-delay:.1s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div><strong>Real-time Analytics</strong><br><span>Monitor KPIs as they happen.</span></div>
+        </div>
+        <div class="login-feature fade-up" style="animation-delay:.25s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <div><strong>Team Collaboration</strong><br><span>Assign tasks and track progress.</span></div>
+        </div>
+        <div class="login-feature fade-up" style="animation-delay:.4s;">
+          <div class="login-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div><strong>Enterprise Security</strong><br><span>Role-based access and audit logs.</span></div>
+        </div>
+      </div>
+
+      <div class="login-stats fade-up" style="animation-delay:.55s;">
+        <div><span class="login-stat-num">12K+</span><span class="login-stat-label">Active Users</span></div>
+        <div><span class="login-stat-num">99.9%</span><span class="login-stat-label">Uptime</span></div>
+        <div><span class="login-stat-num">50+</span><span class="login-stat-label">Integrations</span></div>
+      </div>
+    </div>
+
+    <p style="color:rgba(243,245,248,.5); font-size:.8rem;">&copy; 2026 Corevo Software Pvt. Ltd.</p>
+  </aside>
+
+  <div class="login-form-side">
+    <div class="login-box">
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:.4rem; font-size:.85rem; color:var(--slate); margin-bottom:1.2rem; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Go back to home</a>
+      <span class="eyebrow">Welcome back</span>
+      <h1 style="font-family:var(--f-display); font-size:2rem; margin:.8rem 0 1.8rem;">Sign in</h1>
+
+      <div class="role-toggle">
+        <button type="button" class="active" data-role="user"><i class="fa-solid fa-user"></i>&nbsp; User</button>
+        <button type="button" data-role="admin"><i class="fa-solid fa-user-shield"></i>&nbsp; Admin</button>
+      </div>
+
+      <form class="form-grid" id="login-form" autocomplete="off">
+        <div class="form-field full"><label for="l-email">Email Address</label><input id="l-email" type="email" placeholder="you@company.com" autocomplete="username" required onblur="gmailOnly(this)"></div>
+
+        <div class="form-field full password-field">
+          <label for="l-pass">Password</label>
+          <input id="l-pass" type="password" placeholder="••••••••" autocomplete="current-password" required>
+          <button type="button" class="password-toggle" aria-label="Show password" tabindex="-1">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="form-field full" style="flex-direction:row; align-items:center; justify-content:space-between;">
+          <label style="display:flex; align-items:center; gap:.5rem; font-weight:500;"><input type="checkbox" style="width:auto;"> Remember me</label>
+          <a href="404.html" style="font-size:.85rem; color:var(--teal-deep);">Forgot password?</a>
+        </div>
+        <div class="form-field full">
+          <button type="submit" class="btn btn-primary btn-block" id="login-submit">Sign In as User <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </form>
+
+      <div class="demo-note"><i class="fa-solid fa-circle-info"></i> Demo login — enter any email &amp; password. Choose a role above to open the matching dashboard.</div>
+      <p class="login-footnote">Don't have an account? <a href="signup.html" style="color:var(--teal-deep); font-weight:600;">Sign up</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function gmailOnly(el){
+    var val = el.value.trim();
+    if(val && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(val)){
+      alert('Only Gmail addresses are allowed.');
+      el.value = '';
+      el.focus();
+    }
+  }
+  var role = 'user';
+  var toggleBtns = document.querySelectorAll('.role-toggle button');
+  var submitBtn = document.getElementById('login-submit');
+  toggleBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      toggleBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      role = btn.getAttribute('data-role');
+      submitBtn.innerHTML = (role === 'admin' ? 'Sign In as Admin' : 'Sign In as User') + ' <i class="fa-solid fa-arrow-right"></i>';
+    });
+  });
+  document.getElementById('login-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = role === 'admin' ? 'dashboard-admin.html' : 'dashboard-user.html';
+  });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

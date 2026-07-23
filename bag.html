@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Your Bag | Corevo ERP</title>
+<meta name="description" content="Review the apps in your Corevo subscription bag.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230B0F14%22/><rect x=%2222%22 y=%2222%22 width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%2316C79A%22/><rect x=%2254%22 y=%2222%22 width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23D4A548%22/><rect x=%2222%22 y=%2254%22 width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23D4A548%22/><rect x=%2254%22 y=%2254%22 width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%2316C79A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="Corevo home">
+      <img src="assets/logo_white.webp" alt="Corevo" class="brand-mark">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="bag.html" class="icon-btn" aria-label="View bag">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="bag-count">0</span>
+      </a>
+      <a href="login.html" class="btn btn-primary btn-signin">
+        <i class="fa-solid fa-user"></i><span class="txt">&nbsp;Sign In</span>
+      </a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay"></div>
+<nav class="mobile-nav" aria-label="Mobile">
+  <button class="mobile-nav-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <ul class="mobile-nav-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
+    <li><a href="apps.html"><i class="fa-solid fa-table-cells"></i>&nbsp; Apps</a></li>
+    <li><a href="solutions.html"><i class="fa-solid fa-diagram-project"></i>&nbsp; Solutions</a></li>
+    <li><a href="pricing.html"><i class="fa-solid fa-tag"></i>&nbsp; Pricing</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-building"></i>&nbsp; About</a></li>
+    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>&nbsp; Contact</a></li>
+  </ul>
+  <div class="mobile-nav-actions">
+    <a href="bag.html" class="btn btn-ghost btn-block"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    <a href="login.html" class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Sign In</a>
+    <div class="mobile-nav-social">
+      <a href="404.html" class="js-social-link" data-target="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="404.html" class="js-social-link" data-target="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="404.html" class="js-social-link" data-target="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="404.html" class="js-social-link" data-target="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero" style="padding-bottom:2rem;">
+  <div class="container">
+    <span class="eyebrow">Your Subscription</span>
+    <h1>Bag</h1>
+    <div class="crumb"><a href="index.html">Home</a> / <span>Bag</span></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:2.5rem;">
+  <div class="container">
+
+    <div class="bag-layout" data-bag-layout>
+      <div>
+        <div class="panel">
+          <h3 style="margin-bottom:1rem;">Apps in your bag</h3>
+          <div data-bag-list></div>
+        </div>
+      </div>
+
+      <aside class="bag-summary">
+        <div class="panel">
+          <h3>Subscription Summary</h3>
+          <div class="summary-row"><span>Apps</span><span data-summary-count>0</span></div>
+          <div class="summary-row"><span>Subtotal</span><span data-summary-subtotal>$0/mo</span></div>
+          <div class="summary-row"><span>Estimated Tax (8%)</span><span data-summary-tax>$0/mo</span></div>
+          <div class="summary-row total"><span>Total</span><span data-summary-total>$0/mo</span></div>
+          <button class="btn btn-primary btn-block" data-checkout style="margin-top:1.3rem;">Checkout <i class="fa-solid fa-arrow-right"></i></button>
+          <a href="apps.html" class="btn btn-outline btn-block" style="margin-top:.8rem;">Continue Browsing</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="empty-bag" data-bag-empty style="display:none;">
+      <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="40" y="55" width="120" height="90" rx="14" fill="none" stroke="#16C79A" stroke-width="3"/>
+        <path d="M70 55 V40 a30 30 0 0 1 60 0 V55" fill="none" stroke="#D4A548" stroke-width="3"/>
+        <circle cx="100" cy="100" r="8" fill="#16C79A" class="pulse"/>
+      </svg>
+      <h2 class="section-title" style="font-size:1.5rem;">Your bag is empty</h2>
+      <p style="color:var(--slate); margin-top:.6rem;">Browse the app store and add a few modules to build your plan.</p>
+      <a href="apps.html" class="btn btn-primary" style="margin-top:1.6rem;">Browse Apps <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col footer-brand open">
+        <div class="footer-social">
+          <a href="404.html" class="js-social-link" data-target="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="js-social-link" data-target="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" class="js-social-link" data-target="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="js-social-link" data-target="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <button class="footer-toggle" type="button">Company <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="footer-col-body">
+          <h4 class="desktop-only-label">Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="apps.html">Apps</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <button class="footer-toggle" type="button">Apps <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="footer-col-body">
+          <h4 class="desktop-only-label">Apps</h4>
+          <ul>
+            <li><a href="404.html">CRM</a></li>
+            <li><a href="404.html">Sales</a></li>
+            <li><a href="404.html">Inventory</a></li>
+            <li><a href="404.html">Accounting</a></li>
+            <li><a href="404.html">HR &amp; Payroll</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <button class="footer-toggle" type="button">Get In Touch <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="footer-col-body">
+          <div class="footer-address"><i class="fa-solid fa-location-dot"></i><span>4th Floor, Cyber Gate Tower, HITEC City, Hyderabad, Telangana 500081, India</span></div>
+          <div class="footer-address"><i class="fa-solid fa-phone"></i><span>+91 40 2345 6789</span></div>
+          <div class="footer-address"><i class="fa-solid fa-envelope"></i><span>hello@corevo-erp.example</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Corevo Software Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="404.html" class="js-social-link" data-target="404.html">Privacy Policy</a>
+        <a href="404.html" class="js-social-link" data-target="404.html">Terms of Service</a>
+        <a href="404.html" class="js-social-link" data-target="404.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
